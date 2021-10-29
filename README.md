@@ -16,11 +16,11 @@ This scipt depends on the [`ec2.py`](https://raw.githubusercontent.com/ansible/a
 ## Setup environment
 ### Create a python environment for testing
 
-```# python3 -m venv sshconfig-generator```
+```# python3 -m venv ec2-bastion-sshconfig```
 
 ### Enter the environment
 
-```# source sshconfig-generator/bin/activate```
+```# source ec2-bastion-sshconfig/bin/activate```
 
 ### Install required python modules
 
@@ -28,7 +28,7 @@ This scipt depends on the [`ec2.py`](https://raw.githubusercontent.com/ansible/a
 
 ### Set ENV vars
 ```
-# export AWS_PROFILE=terraform-test
+# export AWS_PROFILE=default
 # export EC2_INI_PATH=/usr/local/etc/ec2.ini
 ```
 ---
