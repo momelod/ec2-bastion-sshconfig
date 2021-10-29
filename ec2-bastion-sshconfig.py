@@ -135,7 +135,7 @@ def cmd():
   # test that we can execute ec2.py
   try:
     subprocess.run(
-      [x, "--help"], 
+      [sys.executable, x, "--help"], 
       capture_output=True
       )
   except:
@@ -144,7 +144,7 @@ def cmd():
   debug('found ec2.py: ' + x)
   debug('running ec2.py ..')
   process = subprocess.run(
-    [x, "--refresh-cache", "--profile", args.profile], 
+    [sys.executable, x, "--refresh-cache", "--profile", args.profile], 
     env=dict(EC2_INI_PATH=args.ec2PyINI), 
     capture_output=True, 
     text=True
