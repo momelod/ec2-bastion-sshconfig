@@ -71,7 +71,15 @@ optional arguments:
 
 ## Example 
 ```
-# python ./ec2-bastion-sshconfig.py --profile test --ec2Py /usr/local/bin/ec2.py --ec2PyINI /usr/local/etc/ec2.ini --sshUser ec2_user --sshKeyPATH ~/.ssh/ec2_keys --sshPort 2222 --awsDNSProfile default --tld example.com | tee -a ~/.ssh/conf.d/example.com
+# python ./ec2-bastion-sshconfig.py \
+  --profile test \
+  --ec2Py /usr/local/bin/ec2.py \
+  --ec2PyINI /usr/local/etc/ec2.ini \
+  --sshUser ec2_user \
+  --sshKeyPATH ~/.ssh/ec2_keys \
+  --sshPort 2222 \
+  --awsDNSProfile default \
+  --tld example.com | tee -a ~/.ssh/conf.d/example.com
 
 ##################################################
 ####   vpc-99999999999999999   ###################
