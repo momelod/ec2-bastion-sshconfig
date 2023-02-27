@@ -236,9 +236,9 @@ def findBastion(inv, vpc):
       else:
         r = n
     return r
-  else:    
+  else:
     return False
-      
+
 def genConfig():
   # output the sshconfigs
   pattern = r'[0-9]+'
@@ -247,7 +247,7 @@ def genConfig():
   inv = json.loads(cmd())
   z = zoneaxfr()
   tld = args.tld.rstrip('.')
-  
+
   for vpc in listVPCs(inv):
     debug('')
     debug('Processing vpc: ' + vpc)
@@ -320,7 +320,7 @@ def genConfig():
       print('  ForwardAgent yes')
       print('  StrictHostKeyChecking no')
       if p:
-        print('  Hostname ' + instanceProp(inv, inst, "ec2_ip_address"))
+        print('  Hostname ' + instanceProp(inv, inst, "ec2_dns_name"))
         print('  Port ' + p)
       else:
         print('  Hostname ' + instanceProp(inv, inst, "ec2_private_ip_address"))
